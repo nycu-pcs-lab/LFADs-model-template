@@ -1,0 +1,39 @@
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+  **** SW Build 3670227 on Oct 13 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source /home/xilinx2022/Vitis_HLS/2022.2/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/home/xilinx2022/Vitis_HLS/2022.2/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'chiaen' on host 'r7515ed520.EE.NCTU.edu.tw' (Linux_x86_64 version 3.10.0-1160.108.1.el7.x86_64) on Thu Jun 27 23:43:05 CST 2024
+INFO: [HLS 200-10] On os "CentOS Linux release 7.9.2009 (Core)"
+INFO: [HLS 200-10] In directory '/home/chiaen/yanlun/template1'
+Sourcing Tcl script 'build_prj.tcl'
+INFO: [HLS 200-1510] Running: source build_prj.tcl
+INFO: [HLS 200-1510] Running: open_project -reset myproject_prj 
+INFO: [HLS 200-10] Opening and resetting project '/home/chiaen/yanlun/template1/myproject_prj'.
+INFO: [HLS 200-1510] Running: set_top myproject 
+INFO: [HLS 200-1510] Running: add_files firmware/myproject.cpp -cflags -std=c++0x 
+INFO: [HLS 200-10] Adding design file 'firmware/myproject.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb myproject_test.cpp -cflags -std=c++0x 
+INFO: [HLS 200-10] Adding test bench file 'myproject_test.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb firmware/weights 
+INFO: [HLS 200-10] Adding test bench file 'firmware/weights' to the project
+INFO: [HLS 200-1510] Running: add_files -tb tb_data 
+INFO: [HLS 200-10] Adding test bench file 'tb_data' to the project
+INFO: [HLS 200-1510] Running: open_solution -reset solution1 
+INFO: [HLS 200-10] Creating and opening solution '/home/chiaen/yanlun/template1/myproject_prj/solution1'.
+INFO: [HLS 200-10] Cleaning up the solution database.
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vivado' configuration: config_interface -m_axi_latency=0
+INFO: [HLS 200-1510] Running: config_compile -name_max_length 60 
+INFO: [XFORM 203-1161] The maximum of name length is set to 60.
+INFO: [HLS 200-1510] Running: set_part xcu50-fsvh2104-2L-e 
+INFO: [HLS 200-1611] Setting target device to 'xcu50-fsvh2104-2L-e'
+INFO: [XFORM 203-1161] The maximum of name length is set to 60.
+INFO: [HLS 200-1510] Running: create_clock -period 5 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-112] Total CPU user time: 3.54 seconds. Total CPU system time: 0.83 seconds. Total elapsed time: 4.23 seconds; peak allocated memory: 1.123 GB.
+INFO: [Common 17-206] Exiting vitis_hls at Thu Jun 27 23:43:09 2024...

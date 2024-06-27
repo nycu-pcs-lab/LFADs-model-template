@@ -1,0 +1,121 @@
+Backend: Vivado
+ClockPeriod: 5
+HLSConfig:
+  LayerName:
+    DecoderGRU:
+      ApplyResetGate: after
+      Direction: forward
+      Precision:
+        act: ap_fixed<16,6>
+        activation: fixed<16,1,RND_CONV,SAT>
+        bias: fixed<16,2>
+        recr_act: ap_fixed<16,6>
+        recurrent_activation: ufixed<16,0,RND_CONV,SAT>
+        recurrent_bias: fixed<16,2>
+        recurrent_weight: fixed<16,2>
+        result: ap_fixed<16,6>
+        shift: ap_fixed<16,6>
+        slope: ap_fixed<16,6>
+        state: fixed<16,7>
+        weight: fixed<16,2>
+      Trace: false
+    Dense:
+      Precision:
+        bias: fixed<16,2>
+        result: ap_fixed<16,6>
+        weight: fixed<16,2>
+      Trace: false
+    DenseMean:
+      Precision:
+        bias: fixed<16,2>
+        result: ap_fixed<16,6>
+        weight: fixed<16,2>
+      Trace: false
+    DenseMean_linear:
+      Precision:
+        result: ap_fixed<16,6>
+      Trace: false
+    Dense_linear:
+      Precision:
+        result: ap_fixed<16,6>
+      Trace: false
+    EncoderRNN:
+      ApplyResetGate: after
+      Direction: forward
+      Precision:
+        act: ap_fixed<16,6>
+        backward_bias: ap_fixed<16,6>
+        backward_recurrent_bias: ap_fixed<16,6>
+        backward_recurrent_weight: ap_fixed<16,6>
+        backward_weight: ap_fixed<16,6>
+        bias: fixed<16,2>
+        forward_bias: ap_fixed<16,6>
+        forward_recurrent_bias: ap_fixed<16,6>
+        forward_recurrent_weight: ap_fixed<16,6>
+        forward_weight: ap_fixed<16,6>
+        recr_act: ap_fixed<16,6>
+        recurrent_activation: ufixed<16,0,RND_CONV,SAT>
+        recurrent_bias: fixed<16,2>
+        recurrent_weight: fixed<16,2>
+        result: fixed<16,1,RND_CONV,SAT>
+        shift: ap_fixed<16,6>
+        slope: ap_fixed<16,6>
+        state: fixed<16,7>
+        weight: fixed<16,2>
+      Trace: false
+    NeuralDense:
+      Precision:
+        bias: fixed<16,2>
+        result: ap_fixed<16,6>
+        weight: fixed<16,2>
+      Trace: false
+    NeuralDense_linear:
+      Precision:
+        result: ap_fixed<16,6>
+      Trace: false
+    decoder_input:
+      Precision:
+        result: ap_fixed<16,6>
+      Trace: false
+    encoder_input:
+      Precision:
+        result: ap_fixed<16,6>
+      Trace: false
+    q_act_dense_mean:
+      Precision:
+        result: fixed<16,7,RND_CONV,SAT>
+      Trace: false
+    q_act_postdecoder:
+      Precision:
+        result: fixed<16,7,RND_CONV,SAT>
+      Trace: false
+    q_act_postdense:
+      Precision:
+        result: fixed<16,7,RND_CONV,SAT>
+      Trace: false
+    q_act_postencoder:
+      Precision:
+        result: fixed<16,7,RND_CONV,SAT>
+      Trace: false
+    q_act_postsampling:
+      Precision:
+        result: fixed<16,7,RND_CONV,SAT>
+      Trace: false
+    q_act_predecoder:
+      Precision:
+        result: fixed<16,7,RND_CONV,SAT>
+      Trace: false
+  Model:
+    BramFactor: 1000000000
+    Precision: ap_fixed<16,6>
+    ReuseFactor: 1
+    Strategy: Resource
+    TraceOutput: false
+IOType: io_array_stream
+InputData: null
+KerasModel: !keras_model './hls_model/lfad_qmodel_16/keras_model.h5'
+OutputDir: ./hls_model/lfad_qmodel_16
+OutputPredictions: null
+Part: xcu250-figd2104-2L-e
+ProjectName: myproject
+Stamp: B9C78DF9
